@@ -1,12 +1,33 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+
+.fixed-header {
+  width: 100%;
+  //position: sticky;
+  background: rgb(33, 163, 255);
+  padding: 10px 0;
+  color: #fff;
+  //top: 0;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.name{
+font-weight: bold;
+font-size: 30px;
+color: rgb(255, 213, 63);
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 5px 0 20px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 7px 25px;
+  display: inline-block;
+
+  &:hover {
+    color: rgb(255, 213, 63);
+    font-weight: bold
+  }
 }
