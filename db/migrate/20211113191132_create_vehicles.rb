@@ -4,6 +4,7 @@ class CreateVehicles < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.string :model
+      t.string :brand
       t.float :rent_cost_per_day
 
       t.timestamps
