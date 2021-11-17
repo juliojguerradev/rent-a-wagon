@@ -1,8 +1,12 @@
-<h1>Vehicles List</h1>
-<% @vehicles.each do |vehicle| %>
-<ul>
-  <li><%= vehicle.name %></li>
-</ul>
-<% end %>
+<div class="container">
 
-<%= link_to "New Vehicle", new_vehicle_path %>
+  <h1>Vehicles List</h1>
+    <% @vehicles.each do |vehicle| %>
+  <ul>
+    <li><%= vehicle.name %></li>
+  </ul>
+  <% end %>
+
+  <%= link_to "New Vehicle", new_vehicle_path %>
+
+</div>

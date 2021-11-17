@@ -9,11 +9,16 @@ class VehiclesController < ApplicationController
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
+    if @vehicle.save
+      redirect_to vehicles_path
+    else
+      render :new
+    end
   end
 
   private
 
   def vehicle_params
-    params.require(:vehicle).permit(:description, :model, :rent_cost_per_day)
+    params.require(:vehicle).permit(:name, :description, :model, :brand, :rent_cost_per_day)
   end
 end
