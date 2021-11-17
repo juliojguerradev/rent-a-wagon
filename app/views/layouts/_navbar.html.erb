@@ -3,11 +3,22 @@
             <nav>
                <label class="name">Rent-A-Wagon</label>
 
-                <a href="home">Home</a>
-                <a href="vehicles">Vehicles</a>
-                <a href="bookings">Bookings</a>
-                <a href="about">About</a>
-                <a href="contact">Contact Us</a>
+                <a href="/home">Home</a>
+                <a href="/vehicles">Vehicles</a>
+                <a href="/bookings">Bookings</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact Us</a>
+
+                <% if user_signed_in? %>
+                <div>
+                  <%= current_user.email %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                </div>
+
+                <% else %>
+                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                <% end %>
+
             </nav>
         </div>
     </div>
