@@ -3,7 +3,7 @@ require 'faker'
 # users
 User.new(email: "edu@lewagon.com", password: "123456").save
 User.new(email: "fer@lewagon.com", password: "123456").save
-User.new(email: "julio@lewagon.com", password: "123456").save
+User.new(email: "manu@lewagon.com", password: "123456").save
 User.new(email: "julio@lewagon.com", password: "123456").save
 
 User.all.each do |user|
