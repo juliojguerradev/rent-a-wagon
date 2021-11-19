@@ -1,11 +1,12 @@
 
-.fixed-header {
+.fixed-header, .fixed-container{
   width: 100%;
   //position: sticky;
   background: rgb(33, 163, 255);
   padding: 10px 0;
   color: #fff;
   //top: 0;
+  display: flex;
 }
 
 .name{
@@ -13,6 +14,8 @@ font-weight: bold;
 font-size: 30px;
 color: rgb(255, 213, 63);
 }
+
+
 
 .container{
   width: 80%;
