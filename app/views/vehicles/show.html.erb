@@ -3,16 +3,15 @@
     <img class="car-img" src="https://source.unsplash.com/collection/2102317/1600x900">
 
     <div class="car-info">
-      <h1 id="name"><%= @vehicle.name %></h1> <p id="rent"><%= @vehicle.rent_cost_per_day %></p>
+      <h1 id="name"><%= @vehicle.name %></h1>
+      <p id="rent"><%= @vehicle.rent_cost_per_day %></p>
       <p id="brand"><%= @vehicle.brand %></p>
       <p id="model"><%= @vehicle.model %></p>
       <p id="description"><%= @vehicle.description %></p>
    </div>
-
   </div>
 
   <div class="link_container">
-    <a href="/bookings/new"><button class="btn">Book Car</button></a>
-
+    <button class="btn"> <%= link_to "Book this car", new_booking_path %></button></a>
   </div>
 </div>
