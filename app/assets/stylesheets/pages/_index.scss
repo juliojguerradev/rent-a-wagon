@@ -1,2 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.vehicles-index {
+
+  background: white;
+  padding: 30px;
+  border: 2px solid grey(255, 213, 63);
+  box-shadow: 0px 2px 2px lightgrey
+}
