@@ -1,0 +1,47 @@
+h1{
+  font-family: Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+p {
+  margin: 0;
+  color: #121214;
+  margin-bottom: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  line-height: 28px;
+  text-transform: none;
+}
+
+#description {
+  color: gray;
+  font-weight: lighter;
+  font-size: 15px;
+
+}
+
+
+
+.btn {
+  background-color: rgb(243, 179, 40);
+  color: white;
+  padding: 5px 10px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px ;
+  border-radius: 4px;
+  transition: transform 250ms;
+   flex-grow: 5;
+  margin-left: 10px;
+  text-align: left;
+
+  &:hover {
+    background-color: rgb(33, 163, 255);
+    cursor: pointer;
+    color: white;
+    transform: translateY(-10px);
+    transition: 250ms;
+  }
+}

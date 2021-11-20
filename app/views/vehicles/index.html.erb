@@ -3,7 +3,7 @@
   <h1>Vehicles List</h1>
     <% @vehicles.each do |vehicle| %>
   <ul>
-    <li><%= vehicle.name %></li>
+    <li> <%= link_to vehicle.name, vehicle_path(vehicle) %> </li>
   </ul>
   <% end %>
 
