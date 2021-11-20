@@ -1,1 +1,33 @@
-// Specific CSS for your home-page
+.text-center {
+  text-align: center;
+}
+
+
+
+.btn {
+  background-color: rgb(243, 179, 40);
+  color: white;
+  padding: 5px 10px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 35px ;
+  border-radius: 5px;
+  transition: transform 250ms;
+  flex-grow: 5;
+  margin-left: 10px;
+  text-align: left;
+
+
+  a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+  &:hover ,:visited{
+    background-color: rgb(33, 163, 255);
+    cursor: pointer;
+    color: white;
+    transform: translateY(-10px);
+    transition: 250ms;
+  }
+}
