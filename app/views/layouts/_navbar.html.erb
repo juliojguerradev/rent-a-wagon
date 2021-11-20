@@ -1,13 +1,14 @@
-<div class="fixed-top fixed-header">
+
+<div class="fixed-top fixed-header flexbox">
         <div class="container">
             <nav>
-               <label class="name">Rent-A-Wagon</label>
+               <label class="name" >Rent-A-Wagon</label>
 
                 <a href="/">Home</a>
                 <%=link_to "Vehicles", vehicles_path%>
                 <%=link_to "Bookings", bookings_path%>
-                <a href="/about">About</a>
-                <a href="/contact">Contact Us</a>
+                <a id="about" href="/about">About</a>
+                <a id="contact" href="/contact">Contact Us</a>
 
                 <% if user_signed_in? %>
                 <div>
