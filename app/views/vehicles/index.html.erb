@@ -1,7 +1,7 @@
 <div class="container">
 
   <h1>Vehicles List</h1>
-  <%= link_to "Go to Map View", map_path %>
+  <%= link_to "Go to Map View", map_path, class: "btn" %>
     <% @vehicles.each do |vehicle| %>
   <ul>
     <li> <%= link_to vehicle.name, vehicle_path(vehicle) %>
