@@ -5,12 +5,12 @@
 }
 
 .booking-card {
-  height: 140px;
+  height: 180px;
   width: 400px;
   min-width: 250px;
   padding: 1rem;
   border-radius: 16px;
-  background: #beb5d1c4;
+  background: hsl(202, 75%, 74%);
   display: flex;
   flex-direction: column;
   transition: .2s;
@@ -18,7 +18,8 @@
 }
 
 .booking-card:hover {
-  transform: translateY(-1rem);
+  transform: translateX(+1rem);
+  background: hsl(202, 75%, 50%);
 }
 
 .booking-card span {
