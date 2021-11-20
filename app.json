@@ -1,0 +1,15 @@
+{
+  "name": "Rent A Wagon App",
+  "description": "This app let's you rent a vehicle from anywhere",
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+
+  "env": {
+    "NPM_CONFIG_PRODUCTION": "false",
+    "NODE_ENV": "development"
+  }
+}
