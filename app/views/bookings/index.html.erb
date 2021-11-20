@@ -1,0 +1,26 @@
+<h1>My Bookings</h1>
+
+<section class="booking-card-list">
+  <% @bookings.each do |booking| %>
+    <% booked_days = booking.end_date.to_date - booking.start_date.to_date + 1%>
+
+    <div class="booking-card ">
+      <div class="d-flex justify-content-center">
+        <span> <%=  booking.start_date.strftime("%b %d, %Y")%></span>
+        <p class= "mx-2"> <i class="fas fa-arrow-circle-right"></i></p>
+        <span> <%=  booking.end_date.strftime("%b %d, %Y")%> </span>
+      </div>
+      <p id="days" class="text-center font-light">  (<%= booked_days.to_i %> days)</p>
+
+      <h2 class="text-center">
+        <%=  booking.vehicle.name%>
+        <small class="text-muted"><%=  booking.vehicle.brand%></small>
+      </h2>
+      <% total_price = booking.vehicle.rent_cost_per_day * booked_days %>
+      <div class="d-flex justify-content-end p-2">
+        <p class="flex">Total price: $<%= total_price.round %></p>
+      </div>
+
+    </div>
+  <% end %>
+</section>
