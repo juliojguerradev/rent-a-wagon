@@ -3,6 +3,7 @@
   <h1>Vehicles List</h1>
     <% @vehicles.each do |vehicle| %>
   <ul>
+    <li> <%= link_to vehicle.name, vehicle_path(vehicle) %> </li>
     <li>
       <%= vehicle.name  %>
       <% if vehicle.photo.attached? %>
