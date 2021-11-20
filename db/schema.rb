@@ -15,16 +15,6 @@ ActiveRecord::Schema.define(version: 2021_11_19_012243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bookings", force: :cascade do |t|
-    t.bigint "vehicle_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_bookings_on_user_id"
-    t.index ["vehicle_id"], name: "index_bookings_on_vehicle_id"
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -44,6 +34,18 @@ ActiveRecord::Schema.define(version: 2021_11_19_012243) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "vehicle_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["vehicle_id"], name: "index_bookings_on_vehicle_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,8 +74,8 @@ ActiveRecord::Schema.define(version: 2021_11_19_012243) do
     t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "bookings", "vehicles"
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "vehicles", "users"
 end
