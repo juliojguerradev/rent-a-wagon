@@ -22,9 +22,23 @@ class VehiclesController < ApplicationController
     @vehicle = Vehicle.find(params[:id])
   end
 
+  def mapper
+    @vehicles = Vehicle.all
+
+    @markers = @vehicles.geocoded.map do |vehicle|
+        {
+          lat: vehicle.latitude,
+          lng: vehicle.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { vehicle: vehicle })
+        }
+      end
+    end
+
+
   private
 
   def vehicle_params
     params.require(:vehicle).permit(:name, :photo, :description, :model, :brand, :rent_cost_per_day)
   end
+
 end
