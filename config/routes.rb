@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :vehicles, only: %i[index new create show]
 
   resources :bookings, only: %i[index new create show]
+
+  get '/mapper', to: 'vehicles#mapper', as: 'map'
+
 end
