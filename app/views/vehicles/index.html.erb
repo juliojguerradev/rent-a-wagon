@@ -5,14 +5,17 @@
     <% @vehicles.each do |vehicle| %>
       <%= link_to  vehicle_path(vehicle) do  %>
         <div class="car-card">
+        <% if vehicle.photo.attached? %>
+          <%= cl_image_tag vehicle.photo.key %>
+          <% else%>
           <img src="https://source.unsplash.com/collection/2102317/1600x900" alt="">
+        <% end %>
+
           <div class="text">
             <h3> <%= vehicle.name %></h3>
           </div>
         </div>
-        <% if vehicle.photo.attached? %>
-          <%= cl_image_tag vehicle.photo.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
+
       <% end %>
     <% end %>
     <div class="car-card">
