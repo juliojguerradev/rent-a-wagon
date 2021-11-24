@@ -8,10 +8,6 @@
       "quantity": 1,
       "size": "hobby"
     },
-    "resque": {
-      "quantity": 1,
-      "size": "hobby"
-    },
     "scheduler": {
       "quantity": 1,
       "size": "hobby"
