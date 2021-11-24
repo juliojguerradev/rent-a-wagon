@@ -1,15 +1,38 @@
 {
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev"
+  "name": "app-name",
+  "scripts": {
+    "postdeploy": "pg_dump $STAGING_DATABASE_URL | psql $DATABASE_URL && bundle exec rake db:migrate"
+  },
+  "env": {
+    "STAGING_DATABASE_URL": {
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
     }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    },
+    "resque": {
+      "quantity": 1,
+      "size": "hobby"
+    },
+    "scheduler": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-basic",
+    "papertrail",
+    "rediscloud"
   ],
   "buildpacks": [
     {
       "url": "heroku/ruby"
     }
-  ],
-  "scripts": {
-    "postdeploy": "bundle exec rails db:seed"
-  }
+  ]
 }
