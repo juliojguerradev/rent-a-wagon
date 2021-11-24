@@ -1,13 +1,19 @@
 
-.fixed-header, .fixed-container {
+.navbar {
   width: 100%;
-  background: rgb(33, 163, 255);
+  background: rgb(0, 121, 207);
   padding: 10px 0;
   color: #fff;
-  box-shadow: 0px 5px 15px rgb(182, 182, 182);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+  height: 8vh;
+  padding-right: 100px;
+  padding-left: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 1000000000;
 }
 
-.flexbox{
+.navbar .flexbox{
 justify-content: space-between;
   align-items: flex-end;
   display: flex
@@ -15,10 +21,11 @@ justify-content: space-between;
 
 #name{
 font-weight: bold;
-font-size: 35px;
+font-size: 39px;
 color: rgb(255, 213, 63);
 text-decoration: none;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: 'Shrikhand', cursive;
+font-family: 'Yellowtail', cursive;
 }
 
 
@@ -29,14 +36,15 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   padding: 0 5px 0 20px;
 }
 
-nav a {
+.navbar a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 7px 25px;
   display: inline-block;
+
+  font-size: 18px;
 
   &:hover {
     color: rgb(255, 213, 63);
-    font-weight: bold
+
   }
 }

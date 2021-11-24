@@ -1,23 +1,28 @@
 <div class="container">
+  <h1>Available Vehicles</h1>
 
-
-  <h1>Vehicles List</h1>
-  <%= link_to "Go to Map View", map_path, class: "btn" %>
-
-  <h1 class="header">Vehicles List</h1>
   <div class="vehicles-index">
-
     <% @vehicles.each do |vehicle| %>
-  <ul>
-    <li> <%= link_to vehicle.name, vehicle_path(vehicle) %>
-      <% if vehicle.photo.attached? %>
-        <%= cl_image_tag vehicle.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= link_to  vehicle_path(vehicle) do  %>
+        <div class="car-card">
+          <img src="https://source.unsplash.com/collection/2102317/1600x900" alt="">
+          <div class="text">
+            <h3> <%= vehicle.name %></h3>
+          </div>
+        </div>
+        <% if vehicle.photo.attached? %>
+          <%= cl_image_tag vehicle.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
       <% end %>
-    </li>
-  </ul>
-  <% end %>
-
-  <%= link_to "New Vehicle", new_vehicle_path %>
+    <% end %>
+    <div class="car-card">
+      <img src="" alt="">
+      <div class="text">
+        <h3> <%= link_to "New Vehicle", new_vehicle_path %> </h3>
+      </div>
+    </div>
   </div>
-
+   <div class="btn-map">
+    <a><%= link_to "Go to Map View", map_path %></a>
+  </div>
 </div>

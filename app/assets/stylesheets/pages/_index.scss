@@ -1,10 +1,114 @@
 // Import page-specific CSS files here.
 @import "home";
 
-.vehicles-index {
+// .card-category {
+//   background-size: cover;
+//   background-position: center;
+//   height: 180px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
 
+body {
   background: white;
-  padding: 30px;
-  border: 2px solid grey(255, 213, 63);
-  box-shadow: 0px 2px 2px lightgrey
+}
+
+.vehicles-index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+
+h3{
+  font-weight: bold;
+font-size: 25px;
+color: rgb(85, 85, 85);
+text-decoration: none;
+font-family: 'Work Sans', sans-serif;
+padding-top: 5px;
+padding-bottom: 5px;
+font-weight: lighter;
+}
+
+.car-card {
+  background: white;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgb(209, 209, 209);
+  border-radius: 3px;
+  text-align: center;
+  width: 350px;
+  transition: transform 0.3s;
+  height: 240px;
+
+  img {
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+}
+
+.car-card:hover {
+  transform: translateY(8px);
+  box-shadow: 2px 2px 15px 0px rgb(209, 209, 209);
+
+  h3{
+    text-decoration: none;
+  }
+}
+
+.new-car-card {
+  background: white;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgb(209, 209, 209);
+  border-radius: 3px;
+  text-align: left;
+  width: 350px;
+ height: 260px;
+  transition: transform 0.3s;
+}
+
+.new-car-card:hover {
+  transform: translateY(8px);
+  box-shadow: 2px 2px 15px 0px rgb(209, 209, 209);
+
+  h3{
+    text-decoration: none;
+  }
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .vehicles-index {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .vehicles-index {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .vehicles-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .vehicles-index {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

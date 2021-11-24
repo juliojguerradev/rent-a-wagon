@@ -1,7 +1,7 @@
+<div class="container">
+  <h1>My Bookings</h1>
 
-<h1 class="header">My Bookings</h1>
-
-<section class="booking-card-list">
+  <div>
   <% @bookings.each do |booking| %>
     <% booked_days = booking.end_date.to_date - booking.start_date.to_date + 1%>
 
@@ -24,4 +24,5 @@
 
     </div>
   <% end %>
-</section>
+  </div>
+</div>
