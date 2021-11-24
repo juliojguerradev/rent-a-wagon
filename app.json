@@ -1,15 +1,15 @@
 {
-  "name": "Rent A Wagon App",
-  "description": "This app let's you rent a vehicle from anywhere",
-
-  "buildpacks": [
+  "addons": [
     {
-      "url": "heroku/nodejs"
+      "plan": "heroku-postgresql:hobby-dev"
     }
   ],
-
-  "env": {
-    "NPM_CONFIG_PRODUCTION": "false",
-    "NODE_ENV": "development"
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rails db:seed"
   }
 }
