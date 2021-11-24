@@ -3,14 +3,6 @@
   "scripts": {
     "postdeploy": "psql $DATABASE_URL && bundle exec rake db:migrate"
   },
-  "env": {
-    "STAGING_DATABASE_URL": {
-      "required": true
-    },
-    "HEROKU_APP_NAME": {
-      "required": true
-    }
-  },
   "formation": {
     "web": {
       "quantity": 1,
