@@ -7,10 +7,6 @@
     "web": {
       "quantity": 1,
       "size": "hobby"
-    },
-    "scheduler": {
-      "quantity": 1,
-      "size": "hobby"
     }
   },
   "addons": [
