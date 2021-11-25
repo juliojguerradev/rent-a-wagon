@@ -1,21 +1,18 @@
 <div class="container">
   <h1>Available Vehicles</h1>
-
   <div class="vehicles-index">
     <% @vehicles.each do |vehicle| %>
       <%= link_to  vehicle_path(vehicle) do  %>
         <div class="car-card">
-        <% if vehicle.photo.attached? %>
-          <%= cl_image_tag vehicle.photo.key %>
+          <% if vehicle.photo.attached? %>
+            <%= cl_image_tag vehicle.photo.key %>
           <% else%>
-          <img src="https://source.unsplash.com/collection/2102317/1600x900" alt="">
-        <% end %>
-
+            <img src="https://source.unsplash.com/collection/2102317/1600x900" alt="">
+          <% end %>
           <div class="text">
             <h3> <%= vehicle.name %></h3>
           </div>
         </div>
-
       <% end %>
     <% end %>
     <div class="car-card">
@@ -25,7 +22,7 @@
       </div>
     </div>
   </div>
-   <div class="btn-map">
+  <div class="btn-map">
     <a><%= link_to "Go to Map View", map_path %></a>
   </div>
 </div>

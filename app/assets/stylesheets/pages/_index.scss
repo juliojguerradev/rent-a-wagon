@@ -1,20 +1,4 @@
-// Import page-specific CSS files here.
 @import "home";
-
-// .card-category {
-//   background-size: cover;
-//   background-position: center;
-//   height: 180px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: white;
-//   font-size: 24px;
-//   font-weight: bold;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-// }
 
 body {
   background: rgb(248, 248, 248);
@@ -27,15 +11,15 @@ body {
   align-items: center;
 }
 
-h3{
+h3 {
   font-weight: bold;
-font-size: 25px;
-color: rgb(85, 85, 85);
-text-decoration: none;
-font-family: 'Work Sans', sans-serif;
-padding-top: 5px;
-padding-bottom: 5px;
-font-weight: lighter;
+  font-size: 25px;
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: lighter;
 }
 
 .car-card {
@@ -61,7 +45,7 @@ font-weight: lighter;
   transform: translateY(8px);
   box-shadow: 2px 2px 15px 0px rgb(209, 209, 209);
 
-  h3{
+  h3 {
     text-decoration: none;
   }
 }
@@ -73,7 +57,7 @@ font-weight: lighter;
   border-radius: 3px;
   text-align: left;
   width: 350px;
- height: 260px;
+  height: 260px;
   transition: transform 0.3s;
 }
 
@@ -81,11 +65,10 @@ font-weight: lighter;
   transform: translateY(8px);
   box-shadow: 2px 2px 15px 0px rgb(209, 209, 209);
 
-  h3{
+  h3 {
     text-decoration: none;
   }
 }
-
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
