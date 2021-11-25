@@ -45,9 +45,10 @@
   margin-left: 10px;
   margin-right: 5px;
 
-
-
-  &:hover,:visited,:link,:active {
+  &:hover,
+  :visited,
+  :link,
+  :active {
     cursor: pointer;
     color: white;
     transform: translateY(-10px);
