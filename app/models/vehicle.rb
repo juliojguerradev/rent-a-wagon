@@ -1,4 +1,6 @@
 class Vehicle < ApplicationRecord
+  include PgSearch::Model
+
   belongs_to :user
   has_one_attached :photo
   geocoded_by :address
@@ -7,7 +9,6 @@ class Vehicle < ApplicationRecord
   validates :name, :model, :brand, presence: true
   validates :rent_cost_per_day, numericality: true
 
-  include PgSearch::Model
   pg_search_scope :search_by_name_model_and_brand,
     against: [ :name, :model, :brand ],
     using: {

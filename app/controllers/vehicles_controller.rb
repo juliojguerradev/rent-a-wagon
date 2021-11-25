@@ -2,11 +2,13 @@ class VehiclesController < ApplicationController
   def index
     @vehicles = Vehicle.all
 
+    # search results
     if params[:query].present?
       @results = Vehicle.search_by_name_model_and_brand(params[:query])
     else
-      @results = nil
+      @results = Vehicle.all
     end
+
   end
 
   def new
@@ -39,11 +41,6 @@ class VehiclesController < ApplicationController
         }
       end
     end
-
-    def search
-        @vehicles = Vehicle.search_by_name_model_and_brand(params[:query])
-    end
-
 
   private
 
