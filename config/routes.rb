@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   get '/mapper', to: 'vehicles#mapper', as: 'map'
 
+  #nested routes/resources
+
 end

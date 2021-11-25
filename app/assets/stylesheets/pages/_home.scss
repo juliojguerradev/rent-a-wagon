@@ -2,28 +2,48 @@
   text-align: center;
 }
 
-
-
-.btn {
-  background-color: rgb(243, 179, 40);
-  color: white;
-  padding: 5px 10px;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 35px ;
-  border-radius: 5px;
-  transition: transform 250ms;
-  flex-grow: 5;
-  margin-left: 10px;
-  text-align: left;
-
-
-  a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
+#landing-img {
+  margin-top: -8vh;
 }
 
-  &:hover ,:visited{
+.img-fluid {
+  box-shadow: 0px 0px 20px 8px rgb(161, 161, 161);
+}
+
+.slogan {
+  font-size: 120px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  line-height: 98px;
+  text-align: left;
+  padding: auto;
+}
+
+.btn-home {
+  background-color: rgb(255, 213, 63);
+  color: white;
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  border-radius: 5px;
+  transition: transform 250ms;
+  z-index: 10000;
+  border: 0px;
+
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+
+  &:hover,
+  :visited {
     background-color: rgb(33, 163, 255);
     cursor: pointer;
     color: white;
