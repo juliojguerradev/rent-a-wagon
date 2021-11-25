@@ -4,20 +4,41 @@
   <h1>Vehicles List</h1>
   <%= link_to "Go to Map View", map_path, class: "btn" %>
 
-  <h1 class="header">Vehicles List</h1>
-  <div class="vehicles-index">
-
-    <% @vehicles.each do |vehicle| %>
-  <ul>
-    <li> <%= link_to vehicle.name, vehicle_path(vehicle) %>
-      <% if vehicle.photo.attached? %>
-        <%= cl_image_tag vehicle.photo.key, height: 300, width: 400, crop: :fill %>
+  <h3>Search</h3>
+    <div class="container">
+      <%= form_tag vehicles_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a vehicle"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
-    </li>
-  </ul>
-  <% end %>
+    </div>
 
-  <%= link_to "New Vehicle", new_vehicle_path %>
-  </div>
+
+      <div class="row p-2">
+        <% @results.each do |vehicle| %>
+        <div class="col-sm-3">
+          <div class="card-search text-left">
+            <% if vehicle.photo.attached? %>
+                <%# <%= cl_image_tag vehicle.photo.key, height: 50, width: 50, crop: :fill %>
+              <% end %>
+
+            <div class="car-info">
+              <h1 id="name"><%= vehicle.name %></h1>
+              <p id="rent"><%= vehicle.rent_cost_per_day %></p>
+              <p id="brand"><%= vehicle.brand %></p>
+              <p id="model"><%= vehicle.model %></p>
+              <p id="description"><%= vehicle.description %></p>
+            </div>
+
+          </div>
+        </div>
+          <% end %>
+      </div>
+
+        <%= link_to "New Vehicle", new_vehicle_path, class: "btn" %>
+
 
 </div>
