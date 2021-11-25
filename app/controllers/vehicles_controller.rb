@@ -1,6 +1,12 @@
 class VehiclesController < ApplicationController
   def index
     @vehicles = Vehicle.all
+
+    if params[:query].present?
+      @results = Vehicle.search_by_name_model_and_brand(params[:query])
+    else
+      @results = nil
+    end
   end
 
   def new
@@ -32,6 +38,10 @@ class VehiclesController < ApplicationController
           info_window: render_to_string(partial: "info_window", locals: { vehicle: vehicle })
         }
       end
+    end
+
+    def search
+        @vehicles = Vehicle.search_by_name_model_and_brand(params[:query])
     end
 
 
