@@ -15,12 +15,13 @@
         </div>
       <% end %>
     <% end %>
-    <div class="car-card">
-      <img src="" alt="">
-      <div class="text">
-        <h3> <%= link_to "New Vehicle", new_vehicle_path %> </h3>
-      </div>
-    </div>
+    <%= link_to  new_vehicle_path do%>
+      <button class="new-car-btn text-center">
+      <i id="car-icon" class="fas fa-car"></i>
+      <br>
+      <i id="plus-icon" class="fas fa-plus"></i>
+      </button>
+    <% end %>
   </div>
   <div class="btn-map">
     <a><%= link_to "Go to Map View", map_path %></a>

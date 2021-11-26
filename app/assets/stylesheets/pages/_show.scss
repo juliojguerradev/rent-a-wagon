@@ -1,6 +1,12 @@
-h1 {
-  font-family: Helvetica, sans-serif;
-  font-weight: 900;
+#vehicle-name {
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+}
+
+.car-info{
+margin: 5px;
+padding-top: 10px;
 }
 
 p {
@@ -19,4 +25,25 @@ p {
   color: gray;
   font-weight: lighter;
   font-size: 15px;
+}
+
+.vehicle-image {
+  height: 50px;
+  width: 50px;
+}
+
+.car-show {
+  background: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+  }
 }
