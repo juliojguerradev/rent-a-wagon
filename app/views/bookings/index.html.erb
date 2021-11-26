@@ -1,6 +1,6 @@
 <div class="container">
   <h1>My Bookings</h1>
-  <div>
+  <div class="booking-card-row">
     <% @bookings.each do |booking| %>
       <% booked_days = booking.end_date.to_date - booking.start_date.to_date + 1%>
       <div class="booking-card ">
