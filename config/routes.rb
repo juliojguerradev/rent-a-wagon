@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 
   get '/mapper', to: 'vehicles#mapper', as: 'map'
+  get '/search', to: 'vehicles#search', as: 'search'
 
   #nested routes/resources
 
