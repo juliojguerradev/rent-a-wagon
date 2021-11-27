@@ -6,8 +6,7 @@
       <h4 >Select dates for <span><%= @vehicle.name%></span></h4>
     </div>
 
-
-<%= simple_form_for [@vehicle, @booking] ,html: {class: "form-layout"} do |f| %>
+<%= simple_form_for([vehicle, booking], remote: true) do |f| %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date  %>
   <%= f.button :submit, "Request Booking", class: "form-btn" %>
