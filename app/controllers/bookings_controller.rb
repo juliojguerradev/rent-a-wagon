@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  # skip_before_action :verify_authenticity_token, only: :create
 
   def index
     @bookings = current_user.bookings
@@ -17,6 +16,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.vehicle = @vehicle
     @booking.user = current_user
+    @booking.status = "Pending to approve"
 
     if @booking.save
       redirect_to new_vehicle_booking_path
