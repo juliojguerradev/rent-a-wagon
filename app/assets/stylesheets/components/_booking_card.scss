@@ -1,25 +1,27 @@
-.booking-card-list {
+.booking-card-row {
   display: flex;
-  padding: 3rem;
-  flex-direction: column;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+
 .booking-card {
-  height: 180px;
   width: 400px;
   min-width: 250px;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 16px;
   background: hsl(202, 75%, 74%);
   display: flex;
   flex-direction: column;
   transition: 0.2s;
-  margin-bottom: 2rem;
+  margin: 2rem 2rem;
 }
 
 .booking-card:hover {
   transform: translateX(+1rem);
-  background: hsl(202, 75%, 50%);
+  background: #3088d1;
+  color: rgb(228, 228, 228);
 }
 
 .booking-card span {
@@ -33,6 +35,10 @@
   font-size: 20px;
   font-weight: bold;
   margin: 0;
+}
+
+.booking-card p {
+  color: inherit
 }
 
 #days {
