@@ -1,15 +1,11 @@
 {
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev"
-    }
-  ],
+  "name": "Rent a Wagon",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:schema:load db:seed"
+  },
   "buildpacks": [
     {
       "url": "heroku/ruby"
     }
-  ],
-  "scripts": {
-    "postdeploy": "bundle exec rails db:seed"
-  }
+  ]
 }

@@ -1,21 +1,13 @@
-
-<div class="fixed-top fixed-header flexbox">
-        <div class="container">
-            <nav>
-               <a id="name" a href="/">Rent-A-Wagon</a>
-                <%=link_to "Vehicles", vehicles_path%>
-                <%=link_to "Bookings", bookings_path%>
-                <a id="about" a href=/>About</a>
-                <a id="contact" a href="/">Contact Us</a>
-
-                <% if user_signed_in? %>
-
-                  <%= current_user.email %>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-                <% else %>
-                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-                <% end %>
-
-            </nav>
-        </div>
-    </div>
+<div class="navbar">
+  <a id="name" a href="/">Rent-A-Wagon</a>
+  <%=link_to "Vehicles", vehicles_path%>
+  <%=link_to "Bookings", bookings_path%>
+  <a id="about" a href="/">About</a>
+  <a id="contact" a href="/">Contact Us</a>
+  <% if user_signed_in? %>
+    <a> <%= current_user.email %> </a>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+  <% end %>
+</div>
