@@ -1,12 +1,15 @@
 #vehicle-name {
   font-family: "Work Sans", sans-serif;
   font-weight: lighter;
-  font-size: 40px;
+  font-size: 50px;
+  padding-left: 10px;
+  text-decoration: underline rgb(0, 121, 207);
 }
 
-.car-info{
-margin: 5px;
-padding-top: 10px;
+.car-info {
+  padding: 16px;
+  position: relative;
+  padding: 20px;
 }
 
 p {
@@ -25,6 +28,7 @@ p {
   color: gray;
   font-weight: lighter;
   font-size: 15px;
+  padding-left: 10px;
 }
 
 .vehicle-image {
@@ -46,4 +50,21 @@ p {
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
   }
+}
+
+#rent {
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  padding: 18px;
+  font-size: 25px;
+}
+
+#brand,
+#model {
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 10px;
+  font-size: 30px;
 }

@@ -1,0 +1,99 @@
+.bar {
+  background: white;
+  box-shadow: 2px 2px 6px 0px rgb(209, 209, 209);
+  border-radius: 5px;
+  width: 100%;
+  height: 120px;
+  border-radius: 100px;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  
+}
+
+//New Car BTN
+.new-car-btn {
+  background: white;
+  border: none;
+  position: auto;
+  box-shadow: 2px 2px 6px 0px rgb(209, 209, 209);
+  border-radius: 50%;
+  text-align: left;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s;
+  background-color: rgb(0, 121, 207);
+  position: relative;
+  text-decoration: none !important;
+  display: inline-block;
+
+  &:hover,
+  :visited {
+    background-color: rgb(255, 213, 63);
+    cursor: pointer;
+    color: white;
+    transform: translateY(-10px);
+    transition: 250ms;
+    text-decoration: none;
+  }
+}
+
+//Map BTN
+
+.map-button {
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-map {
+  background: white;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgb(209, 209, 209);
+  border-radius: 50%;
+  text-align: left;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s;
+  background-color: rgb(0, 121, 207);
+  position: relative;
+
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+
+  &:hover,
+  :visited {
+    background-color: rgb(255, 213, 63);
+    cursor: pointer;
+    color: white;
+    transform: translateY(-10px);
+    transition: 250ms;
+    text-decoration: none;
+  }
+}
+
+//ICONS
+
+.icons {
+  padding: 20px;
+  margin: 10px;
+}
+button {
+  margin: 5px;
+}
+
+#map-icon {
+  font-size: 65px;
+  color: white;
+}
+
+#car-icon {
+  font-size: 65px;
+  color: white;
+}

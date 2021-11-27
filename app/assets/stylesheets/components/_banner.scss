@@ -1,0 +1,38 @@
+.banner {
+  background-position: center;
+  padding: 140px 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+  display: flex;
+  height: 120px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://i.pinimg.com/originals/8c/13/ea/8c13ead05f9f6d42f38efbafbb1169c2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#banner-main {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 65px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+}
+
+#banner-sub {
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+}
+
+.text-banner {
+  margin-left: 20%;
+  top: 40%;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 65px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+}

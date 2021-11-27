@@ -1,7 +1,7 @@
-<div class="container">
-  <div class="card text-left">
-
-    <%= link_to  vehicle_path(@vehicle) do  %>
+<div class="body">
+  <div class="container">
+    <div class="card text-left">
+      <%= link_to  vehicle_path(@vehicle) do  %>
         <div class="car-show">
           <% if @vehicle.photo.attached? %>
             <%= cl_image_tag @vehicle.photo.key %>
@@ -10,16 +10,18 @@
           <% end %>
         </div>
       <% end %>
-    <div class="car-info">
-      <h2 id="vehicle-name"><%= @vehicle.name %></h2>
-      <p id="description"><%= @vehicle.description %></p>
-      <p id="model"><%= @vehicle.model %></p>
-      <p id="brand"><%= @vehicle.brand %></p>
-      <p id="rent">$<%= @vehicle.rent_cost_per_day%> per day</p>
+      <div class="car-info">
+        <div>
+          <div class="d-flex justify-content-between">
+            <h2 id="vehicle-name"><%= @vehicle.name %></h2>
+            <p id="rent">$<%= @vehicle.rent_cost_per_day%> per day</p>
+          </div>
+          <p id="description"><%= @vehicle.description %></p>
+          <p id="model"><%= @vehicle.model %></p>
+          <p id="brand"><%= @vehicle.brand %></p>
+          <button id="book-btn" class="btn float-right"> <%= link_to "Book this car", new_vehicle_booking_path(@vehicle) %></button></a>
+      </div>
     </div>
   </div>
-  <div class="link_container">
-    <button class="btn"> <%= link_to "Book this car", new_vehicle_booking_path(@vehicle) %></button></a>
 </div>
-
 </div>

@@ -1,5 +1,21 @@
+<%= render "layouts/banner" %>
 <div class="container">
-  <h1>Available Vehicles</h1>
+
+  <div class="bar d-flex justify-content-end align-items-center">
+    <div class="icons">
+      <%= link_to  new_vehicle_path, class:"map-button" do%>
+        <button class="new-car-btn text-center">
+          <i id="car-icon" class="fas fa-car"></i>
+        </button>
+      <% end %>
+      <%= link_to  map_path, class:"map-button" do%>
+        <button class="btn-map text-center">
+          <i id="map-icon" class="fas fa-globe-americas"></i>
+        </button>
+      <% end %>
+    </div>
+  </div>
+
   <div class="vehicles-index">
     <% @vehicles.each do |vehicle| %>
       <%= link_to  vehicle_path(vehicle) do  %>
@@ -15,15 +31,5 @@
         </div>
       <% end %>
     <% end %>
-    <%= link_to  new_vehicle_path do%>
-      <button class="new-car-btn text-center">
-      <i id="car-icon" class="fas fa-car"></i>
-      <br>
-      <i id="plus-icon" class="fas fa-plus"></i>
-      </button>
-    <% end %>
-  </div>
-  <div class="btn-map">
-    <a><%= link_to "Go to Map View", map_path %></a>
   </div>
 </div>
