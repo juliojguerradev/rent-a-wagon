@@ -1,5 +1,17 @@
-<%= simple_form_for [@vehicle, @booking] do |f| %>
+<div class="container wrapper">
+  <div id="form-content">
+
+    <div id="form-header">
+      <h3 id="name">Rent-A-Wagon</h3>
+      <h4 >Select dates for <span><%= @vehicle.name%></span></h4>
+    </div>
+
+
+<%= simple_form_for [@vehicle, @booking] ,html: {class: "form-layout"} do |f| %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date  %>
-  <%= f.button :submit %>
+  <%= f.button :submit, "Request Booking", class: "form-btn" %>
 <% end %>
+
+  </div>
+</div>
