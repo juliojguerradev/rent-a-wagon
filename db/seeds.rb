@@ -1,13 +1,13 @@
 require 'faker'
 
 # users
-User.new(email: "edu@lewagon.com", password: "123456").save
-User.new(email: "fer@lewagon.com", password: "123456").save
-User.new(email: "manu@lewagon.com", password: "123456").save
-User.new(email: "julio@lewagon.com", password: "123456").save
+User.new(email: "edu@lewagon.com", first_name: "Eduardo", password: "123456").save
+User.new(email: "fer@lewagon.com", first_name: "Fernando", password: "123456").save
+User.new(email: "manu@lewagon.com", first_name: "Manuel", password: "123456").save
+User.new(email: "julio@lewagon.com", first_name: "Julio", password: "123456").save
 
 # Delete Bookings created from seed
-Booking.where("status like '%seed%'").destroy_all
+Booking.destroy_all
 
 def new_vehicle(user_id)
   Vehicle.new(
@@ -27,7 +27,7 @@ def new_booking(user_id, vehicle_id)
     user_id: user_id,
     start_date: Date.today + (1..10).to_a.sample,
     end_date: Date.today + (11..29).to_a.sample,
-    status: "available(seed)"
+    status: "available"
   )
 end
 

@@ -1,17 +1,14 @@
 <div class="container wrapper">
   <div id="form-content">
-
     <div id="form-header">
       <h3 id="name">Rent-A-Wagon</h3>
       <h4 >Select dates for <span><%= @vehicle.name%></span></h4>
     </div>
-
-
-<%= simple_form_for [@vehicle, @booking] ,html: {class: "form-layout"} do |f| %>
-  <%= f.input :start_date, as: :date %>
-  <%= f.input :end_date, as: :date  %>
-  <%= f.button :submit, "Request Booking", class: "form-btn" %>
-<% end %>
-
+  <div class="text-left m-3">
+    <%= simple_form_for([vehicle, booking], remote: true) do |f| %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.button :submit %>
+    <% end %>
   </div>
 </div>
