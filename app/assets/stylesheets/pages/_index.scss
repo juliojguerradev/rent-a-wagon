@@ -1,11 +1,15 @@
 @import "home";
-.container{
+.container {
   align-items: center;
+   min-height:100%;
+   position:relative;
 }
 
 body {
   background: rgb(248, 248, 248);
 }
+
+
 
 .vehicles-index {
   display: grid;
@@ -54,7 +58,24 @@ h3 {
   }
 }
 
+.booking-name {
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 65px;
+  padding-left: 25px;
+  text-decoration: underline rgb(255, 213, 63);
+}
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 780px;
+}
+
+.flex-item-grow {
+  flex: 1 0 auto;
+
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

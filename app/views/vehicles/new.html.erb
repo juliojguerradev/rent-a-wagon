@@ -1,19 +1,31 @@
-<div class="body">
-  <div class="container">
-    <div class="row justify-content-left">
-      <div class="col-6">
-        <h1>New Vehicle</h1>
-        <%= simple_form_for @vehicle do |f| %>
-          <%= f.input :name %>
-          <%= f.input :photo, as: :file %>
-          <%= f.input :description %>
-          <%= f.input :model %>
+<div class="container wrapper">
+  <div id="form-content">
+
+    <div id="form-header">
+      <h3 id="name">Rent-A-Wagon</h3>
+      <h4 >Add your vehicle</h4>
+    </div>
+
+        <%= simple_form_for @vehicle, html: {class: "form-layout"} do |f| %>
+
+           <div class="d-flex justify-content-between">
+                 <%= f.input :name %>
+                      <%= f.input :photo, as: :file, label_html: { value: 'Upload' }, placeholder: "Upload photo" %>
+          </div>
+
+
+          <%= f.input :description, placeholder: "Tell us about your vehicle" %>
+          <div class="d-flex justify-content-between">
+                 <%= f.input :model, placeholder: true%>
           <%= f.input :brand %>
+          </div>
+
           <%= f.input :rent_cost_per_day %>
           <%= f.input :address %>
-          <%= f.button :submit, class: 'btn btn-primary' %>
-        <% end %>
-      </div>
-    </div>
+
+          <div class="form-actions">
+            <%= f.button :submit , class: 'form-btn'%>
+          </div>
+      <% end %>
   </div>
 </div>

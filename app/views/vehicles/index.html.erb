@@ -1,7 +1,20 @@
 <%= render "layouts/banner" %>
 <div class="container">
-
   <div class="bar d-flex justify-content-end align-items-center">
+    <div class="flex-container">
+      <div class="flex-item-grow">
+        <%= form_tag vehicles_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a vehicle"
+        %>
+        </div>
+        <div >
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
     <div class="icons">
       <%= link_to  new_vehicle_path, class:"map-button" do%>
         <button class="new-car-btn text-center">
@@ -15,7 +28,7 @@
       <% end %>
     </div>
   </div>
-
+  <h1>Available Vehicles</h1>
   <div class="vehicles-index">
     <% @vehicles.each do |vehicle| %>
       <%= link_to  vehicle_path(vehicle) do  %>
