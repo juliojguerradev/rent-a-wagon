@@ -1,23 +1,33 @@
+<%= render "layouts/banner" %>
 <div class="container">
-
-
+  <div class="bar d-flex justify-content-end align-items-center">
     <div class="flex-container">
       <div class="flex-item-grow">
-         <%= form_tag vehicles_path, method: :get do %>
-        <%= text_field_tag :query,
+        <%= form_tag vehicles_path, method: :get do %>
+          <%= text_field_tag :query,
           params[:query],
           class: "form-control",
           placeholder: "Find a vehicle"
         %>
-      </div>
-
-      <div >
+        </div>
+        <div >
           <%= submit_tag "Search", class: "btn btn-primary" %>
-      </div>
-
+        </div>
       <% end %>
     </div>
-
+    <div class="icons">
+      <%= link_to  new_vehicle_path, class:"map-button" do%>
+        <button class="new-car-btn text-center">
+          <i id="car-icon" class="fas fa-car"></i>
+        </button>
+      <% end %>
+      <%= link_to  map_path, class:"map-button" do%>
+        <button class="btn-map text-center">
+          <i id="map-icon" class="fas fa-globe-americas"></i>
+        </button>
+      <% end %>
+    </div>
+  </div>
   <h1>Available Vehicles</h1>
   <div class="vehicles-index">
     <% @vehicles.each do |vehicle| %>
@@ -34,14 +44,5 @@
         </div>
       <% end %>
     <% end %>
-    <div class="car-card">
-      <img src="" alt="">
-      <div class="text">
-        <h3> <%= link_to "New Vehicle", new_vehicle_path %> </h3>
-      </div>
-    </div>
-  </div>
-  <div class="btn-map">
-    <a><%= link_to "Go to Map View", map_path %></a>
   </div>
 </div>

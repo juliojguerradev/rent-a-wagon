@@ -17,25 +17,28 @@
   font-weight: 700;
   position: absolute;
   top: 18%;
-  left: 10%;
+  left: 12%;
   line-height: 98px;
   text-align: left;
   padding: auto;
 }
 
 .btn-home {
-  background-color: rgb(255, 213, 63);
-  color: white;
-  padding: 15px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.782);
+  padding: 6px 30px;
   position: relative;
-  bottom: 250px;
+  bottom: 180px;
   font-family: "Roboto", sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 40px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+  font-size: 50px;
   border-radius: 50px;
   transition: transform 250ms;
   z-index: 10000;
-  border: 0px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
 
   a:hover,
   a:visited,
@@ -46,7 +49,8 @@
 
   &:hover,
   :visited {
-    background-color: rgb(33, 163, 255);
+    background-color: rgb(0, 121, 207);
+    border: 3px solid rgb(0, 121, 207);
     cursor: pointer;
     color: white;
     transform: translateY(-10px);

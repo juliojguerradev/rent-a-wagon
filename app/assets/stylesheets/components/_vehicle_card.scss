@@ -1,9 +1,10 @@
 .card {
   background: white;
-  padding: 30px;
-  border: 2px solid grey(255, 213, 63);
+  border: 2px lightgrey (255, 213, 63);
   width: 100%;
-  box-shadow: 0px 2px 2px lightgrey;
+  box-shadow: 0px 2px 6px 0px rgb(209, 209, 209);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .card-search{

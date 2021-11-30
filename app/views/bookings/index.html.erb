@@ -1,35 +1,34 @@
-<div class="container">
-  <h1>My Bookings</h1>
-  <div class="booking-card-row">
-    <% @bookings.each do |booking| %>
-      <% booked_days = booking.end_date.to_date - booking.start_date.to_date + 1%>
-      <div class="booking-card">
-        <div class="flex flex-column">
-
-          <div class="d-flex mb-2">
-            <span> <%=  booking.start_date.strftime("%b %d, %Y")%></span>
-            <p class= "mx-2"> <i class="fas fa-arrow-circle-right"></i></p>
-            <span> <%=  booking.end_date.strftime("%b %d, %Y")%> </span>
-          </div>
-
-          <div class="d-flex my-3">
-            <p id="days" class="font-light">(<%= booked_days.to_i %> days)</p>
-          </div>
-
-          <div class="d-flex my-3">
-            <h2 class="text-left">
-              <%=booking.vehicle.name%>
-            </h2>
-            <small class="text-muted p-1"><%=booking.vehicle.brand%></small>
-          </div>
-          <div class="mt-4">
-            <% total_cost = booking.vehicle.rent_cost_per_day * booked_days %>
-            <div class="d-flex justify-content-end p-2">
-              <p class="flex">Total cost: $<%= total_cost.round %></p>
+<div class="body">
+  <div class="container">
+    <h1 class="booking-name">My Bookings</h1>
+    <div class="booking-card-row">
+      <% @bookings.each do |booking| %>
+        <% booked_days = booking.end_date.to_date - booking.start_date.to_date + 1%>
+        <div class="booking-card">
+          <div class="flex flex-column">
+            <div class="d-flex mb-2">
+              <span> <%=  booking.start_date.strftime("%b %d, %Y")%></span>
+              <p class= "mx-2"> <i class="fas fa-arrow-circle-right"></i></p>
+              <span> <%=  booking.end_date.strftime("%b %d, %Y")%> </span>
+            </div>
+            <div class="d-flex my-3">
+              <p id="days" class="font-light">(<%= booked_days.to_i %> days)</p>
+            </div>
+            <div class="d-flex my-3">
+              <h2 class="text-left">
+                <%=booking.vehicle.name%>
+              </h2>
+              <small class="text-muted p-1"><%=booking.vehicle.brand%></small>
+            </div>
+            <div class="mt-4">
+              <% total_cost = booking.vehicle.rent_cost_per_day * booked_days %>
+              <div class="d-flex justify-content-end p-2">
+                <p class="flex">Total cost: $<%= total_cost.round %></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
