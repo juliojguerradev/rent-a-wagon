@@ -70,6 +70,15 @@ h3 {
   }
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-grow {
+  flex: 1 0 auto;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .vehicles-index {
